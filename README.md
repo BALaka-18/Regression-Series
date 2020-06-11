@@ -15,7 +15,7 @@ Notebook 2 : Linear Regression, using Gradient Descent, from scratch. Consists o
 Kaggle Link to notebook : https://www.kaggle.com/balaka18/lin-reg-using-gradient-descent-from-scratch
 __________________________________________________________________________________________________________________________________________
 
-Notebook 2 : Polynomial Regression.
+Notebook 3 : Polynomial Regression.
 
 ![image](https://user-images.githubusercontent.com/49288068/84427315-5c06f400-ac42-11ea-8fcc-5dd1341229bc.png)
 
