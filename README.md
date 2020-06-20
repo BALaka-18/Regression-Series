@@ -23,3 +23,8 @@ Notebook 3 : Polynomial Regression.
 
 Kaggle Link to notebook : https://www.kaggle.com/balaka18/polynomial-reg-task
 _______________________________________________________________________________________________________________________________________
+
+Notebook 4 : Logistic Regression : Geometric Intuition, finding out the better classifying line for 2-D line.
+
+Colab link inlcuded in the notebook.
+_______________________________________________________________________________________________________________________________________
