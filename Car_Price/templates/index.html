@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>PricePredictor : Draft Design</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg- col-xl-9 mx-auto">
+          <div class="card card-signin flex-row my-4">
+            <div class="card-header" style="text-align: right; width: 25rem; background-color: rgba(0,0,0,.05);">
+              <br>
+              <h2 class="text-primary"><strong>WELCOME TO THE CAR PRICE PREDICTOR</strong></h2>
+              <h6 style="color: #6c757d;">An app that predicts (or atleast tries to!) the price of the car you want to sell.</h6>
+              <br>
+              <h6 style="color: #6c757d;">Enter the details <strong class="text-primary">here   &nbsp;>>></strong></h6>
+              <br>
+              <div class="icons" style="align-items:center; justify-content:center; text-align:center; margin-top: 2rem; margin-bottom: 0rem; border-bottom: 0em; padding-bottom: 0rem;">
+                <i class="fas fa-car" style="font-size: 180px; color: #93acb5;"></i>
+              </div>
+            </div>
+            <div class="card-body">              
+              <form class="form-signin" action="{{url_for('predict')}}" method="POST">
+                <div class="form-label-group">
+                  <label for="item" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Choose Company</label>
+                  <br>
+                  <select id="item" name="item">
+                    {% for i in range(comp|length) %}
+                    <option value={{comp[i]}}>{{comp[i]}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <br>
+                <!--<div class="form-label-group">
+                    <input type="text" id="item" name="item" class="form-control" placeholder="Company Name" required>
+                    <label for="item">Company Name</label>
+                </div>-->
+                
+                <div class="form-label-group">
+                  <label for="model" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Model Name</label>
+                  <input type="text" id="model" name="model" class="form-control" placeholder="Model Name" required>
+                </div>
+                <br>
+                <div class="form-label-group">
+                  <label for="inputYear" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Year of Purchase</label>
+                  <br>
+                  <select id="inputYear" name="inputYear">
+                    {% for i in range(yr|length) %}
+                    <option value={{yr[i]}}>{{yr[i]}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <br>
+                <div class="form-label-group">
+                  <label for="distance" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Distance Covered</label>
+                  <input type="number" id="distance" name="distance" class="form-control" placeholder="Distance Covered" required>
+                </div>
+                <br>
+                <div class="form-label-group">
+                    <label for="fuel" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Choose Fuel Type</label>
+                    <br>
+                    <select id="fuel" name="fuel">
+                      <option value="Petrol">Petrol</option>
+                      <option value="Diesel">Diesel</option>
+                      <option value="LPG">LPG</option>
+                    </select>
+                </div>
+                <br>
+                <button class="btn btn-primary text-uppercase" type="submit"><strong>Predict</strong></button>
+
+                <a href="{{url_for('home')}}", class="btn text-light" style="background-color: #6c757d;"><strong>RESET</strong></a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+</html>
