@@ -1,5 +1,5 @@
 # Regression-Series
-A series of notebooks on Linear Regression
+A series of notebooks on Linear and Logistic Regression
 
 Notebook 1 : Linear Regression from scratch. Consists of a LinearRegression class, with two basic methods - 1) fit() ; 2) predict(). The notebook also plots the best fit line.
 
