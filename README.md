@@ -28,3 +28,7 @@ Notebook 4 : Logistic Regression : Geometric Intuition, finding out the better c
 
 Colab link inlcuded in the notebook.
 _______________________________________________________________________________________________________________________________________
+
+Notebook 5 : Logistic Regression : Squashing (sigmoid function) and Gradient descent to find optimal weight matrix.
+
+_______________________________________________________________________________________________________________________________________
