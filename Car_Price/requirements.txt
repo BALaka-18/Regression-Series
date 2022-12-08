@@ -2,7 +2,7 @@ Flask-Compress==1.4.0
 Flask-Material==0.1.1
 Flask-Materialize==0.2.4
 Flask-SQLAlchemy==2.4.1
-certifi==2020.4.5.1
+certifi==2022.12.7
 chardet==3.0.4
 click==7.1.2
 Flask==1.1.2
